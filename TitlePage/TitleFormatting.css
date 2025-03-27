@@ -1,0 +1,86 @@
+.button 
+{
+	position:absolute;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button1 
+{
+	background-color: white; 
+	color: black; 
+	border: 2px solid #04AA6D;
+	padding: 16px 24px;
+	top:10rem;
+}
+
+.button1:hover 
+{
+	background-color: #04AA6D;
+	color: white;
+}
+
+.button2 
+{
+	background-color: white; 
+	color: black; 
+	border: 2px solid #008CBA;
+	padding: 16px 14.5px;
+	top:15rem;
+}
+
+.button2:hover 
+{
+	background-color: #008CBA;
+	color: white;
+}
+
+.button3
+{
+	background-color: white; 
+	color: black; 
+	border: 2px solid #ff6c52;
+	padding: 16px 26px;
+	top:20rem;
+}
+
+.button3:hover 
+{
+	background-color: #ff6c52;
+	color: white;
+}
+
+.logOut
+{
+	position:absolute;
+	top:0.5rem;
+	right:0.5rem;
+}
+
+.title
+{
+	font-size:3rem;
+	position:absolute;
+	left:30%;
+}
+
+.mission
+{
+	display:block;
+	position:absolute;
+	top:15rem;
+	right:5rem;
+}
+
+.reviews
+{
+	position:absolute;
+	bottom:10rem;
+}
