@@ -57,13 +57,6 @@
 	color: white;
 }
 
-.logOut
-{
-	position:absolute;
-	top:0.5rem;
-	right:0.5rem;
-}
-
 .title
 {
 	font-size:3rem;
@@ -82,5 +75,32 @@
 .reviews
 {
 	position:absolute;
-	bottom:10rem;
+	top:450px;
+}
+
+.login 
+{
+	background-color: lightgrey;
+	width: 65px;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 10px;
+	margin:0px;
+	position:absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.logOut 
+{
+	padding-left:9.47px;
+	padding-right:9.47px;
+	margin-bottom:5px;
+}
+
+.signIn
+{
+	padding-left:1px;
+	padding-right:1px;
+	width:60px;
 }
