@@ -3,13 +3,68 @@
 
 <head>
 	<title>Camelingo Home Page</title>
-	<link rel="stylesheet" href="TitleFormatting.css">
+	<link rel="stylesheet" href="TitlePage/TitleFormatting.css">
+	<script src="TitlePage/TitleJS.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 	<h1 class="title">Welcome to Camelingo!</h1>
-	<a href=./TitlePage/TitlePage.html>Title page</p>
+
+	   <div class="login-section">
+        <div class="container" id="auth-container">
+            <h2>Login</h2>
+
+			<button class="login" onclick="redirectToLogin()">Log In</button>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+            <p id="message"></p>
+        </div>
+    </div>
+	
+	
+	<div class="nav">
+		<button class="button button1" onclick="alert('This function has yet to be implemented')">Browse Library</button>
+		<button class="button button2" onclick="redirectToDeckCreator()">Create New Deck</button>
+		<button class="button button3" onclick="redirectToDeckBrowser()">Browse Decks</button>
+	</div>
+
+	<div class="reviews">
+		<h1>Satisfied Customers:</h1>
+		
+		<div class="review1">
+			<img src="TitlePage/ProfilePicture.jpg" class="profilePic">
+			<p>I love the website -User</p>
+		</div>
+		
+		<div class="review2">
+			<img src="TitlePage/ProfilePicture.jpg" class="profilePic">
+			<p>I love the website -User2</p>
+		</div>
+		
+		<div class="review3">
+			<img src="TitlePage/ProfilePicture.jpg" class="profilePic">
+			<p>I love the website -User3</p>
+		</div>
+		
+	</div>
+
+	<div class="mission">
+		<h2>What we do/why we are different!</h2>
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ul>
+	</div>
+	
+		<!--<button class="login" onclick="redirectToLogin()">Log In</button> -->
+		<!-- <button class="signIn" onclick="alert('This function has yet to be implemented')">Sign Up</button> -->
+		
 
 </body>
 </html>
