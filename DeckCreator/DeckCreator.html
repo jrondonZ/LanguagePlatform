@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="DeckCreatorFormatting.css">
+</head>
+
+<body>
+    <h1>Create New Deck</h1>
+	
+   
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+
+    <div class="menuPos">
+        <ul class="top-level">
+            <li>
+                <a href="#">Select Type</a>
+                <ul class="second-level">
+                    <li><a href="#" id="flashcard-btn">Flashcards</a></li>
+                    <li><a href="../U1/RainbowRepo.png">Study Guide</a></li>
+                    <li><a href="../U1/RainbowNetwork.png">Practice Test</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <br><br>
+
+    <label for="name">Name of Deck:</label>
+    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"/>
+
+    <br><br><br>
+
+    <div class="flashcard-container" id="flashcards">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Albert Einstein</div>
+                <div class="flashcard-back">Famous scientist</div>
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Isaac Newton</div>
+                <div class="flashcard-back">Developed the laws of motion</div>
+            </div>
+        </div>
+
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">Nikola Tesla</div>
+                <div class="flashcard-back">Pioneer of electricity</div>
+            </div>
+        </div>
+    </div>
+
+   
+    <table id="terms-table">
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Albert Einstein</td>
+                <td>Famous scientist</td>
+            </tr>
+            <tr>
+                <td>Isaac Newton</td>
+                <td>Developed the laws of motion</td>
+            </tr>
+            <tr>
+                <td>Nikola Tesla</td>
+                <td>Pioneer of electricity</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <<script>
+   
+        document.getElementById("flashcard-btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent link from navigating
+            document.getElementById("terms-table").style.display = "none"; // Hide table
+            document.getElementById("flashcards").style.display = "flex"; // Show flashcards
+        });
+
+        // Function to flip the flashcard
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+
+        // Save deck name to localStorage
+        document.getElementById("name").addEventListener("input", function() {
+            localStorage.setItem("deckName", this.value);
+        });
+
+        // Load deck name when page loads
+        window.onload = function() {
+            const savedName = localStorage.getItem("deckName");
+            if (savedName) {
+                document.getElementById("name").value = savedName;
+            }
+        };
+
+        // Log out function
+        function logout() {
+            localStorage.removeItem("deckName"); // Clear saved deck name
+            window.location.href = "login.html"; // Redirect to login page 
+        }
+    </script>>
+</body>
+</html>
