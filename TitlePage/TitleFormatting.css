@@ -1,12 +1,21 @@
 .title {
-	font-size:3rem;
-	position:absolute;
+	font-size:5rem;
 	left:30%; 
 	text-decoration-line: underline;
+	font-family: 'Fredoka', sans-serif;
+	text-align: center;
+	color: #57b7e4;
+	margin-bottom: 20px;
+}
+
+.nav{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	gap: 20px;
 }
 
 .button {
-	position:absolute;
 	left: 80px;
 	border: none;
 	color: white;
@@ -18,48 +27,52 @@
 	transition-duration: 0.4s;
 	cursor: pointer;
 	width:400px;
+	font-family: 'Fredoka', sans-serif;
 }
 
 .button1 {
 	background-color: white; 
 	color: black; 
-	border: 2px solid gray;
+	border: 2px solid blue;
 	padding: 16px 24px;
 	margin-bottom: 16px;
 	top:10rem;
+	
 }
 
 .button1:hover {
-	background-color: gray;
+	background-color: blue;
 	color: white;
 }
 
 .button2 {
 	background-color: white; 
 	color: black; 
-	border: 2px solid gray;
+	border: 2px solid blue;
 	padding: 16px 14.5px;
 	margin-bottom: 16px;
 	margin-top: 16px;
 	top:15rem;
+	
 }
 
 .button2:hover {
-	background-color: gray;
+	background-color: blue;
 	color: white;
 }
 
 .button3 {
 	background-color: white; 
 	color: black; 
-	border: 2px solid gray;
+	border: 2px solid blue;
 	padding: 16px 26px;
 	margin-top: 32px;
 	top:20rem;
+	
 }
 
 .button3:hover {
-	background-color: gray;
+	background-color: blue;
 	color: white;
 }
 
@@ -71,7 +84,7 @@
 
 .reviews img {
 	width:40px;
-	heigh:40px;
+	height:40px;
 	position:relative;
 	top:5px;
 	left:5px;
@@ -99,7 +112,7 @@
 	right:5rem;
 }
 
-.accountSection
+.login-section
 {
 	background-color: lightgrey;
 	width: 65px;
@@ -108,11 +121,11 @@
 	padding: 10px;
 	margin:0px;
 	position:absolute;
-	top: 0px;
-	right: 0px;
+	fill-rule: 0px;
+	grid: 0px;
 }
 
-.logOut 
+.login
 {
 	padding-left:9.47px;
 	padding-right:9.47px;
@@ -125,4 +138,3 @@
 	padding-right:1px;
 	width:60px;
 }
-

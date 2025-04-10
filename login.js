@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
 const app = express();
+//connect tp mongodb
+const dbURI = 'mongodb+srv://jrondon:<G@Cq8M8zEn7tZr5>@cluster0.ip2kygw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 app.use(express.json());
 app.use(cors());
 
