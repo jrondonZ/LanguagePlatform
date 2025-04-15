@@ -8,7 +8,7 @@
 	margin-bottom: 20px;
 }
 
-.nav{
+.nav {
 	display: flex;
 	flex-direction:column;
 	align-items: center;
@@ -30,6 +30,11 @@
 	font-family: 'Fredoka', sans-serif;
 }
 
+.button:hover {
+	background-color: blue;
+	color: white;
+}
+
 .button1 {
 	background-color: white; 
 	color: black; 
@@ -38,11 +43,6 @@
 	margin-bottom: 16px;
 	top:10rem;
 	
-}
-
-.button1:hover {
-	background-color: blue;
-	color: white;
 }
 
 .button2 {
@@ -56,11 +56,6 @@
 	
 }
 
-.button2:hover {
-	background-color: blue;
-	color: white;
-}
-
 .button3 {
 	background-color: white; 
 	color: black; 
@@ -71,15 +66,11 @@
 	
 }
 
-.button3:hover {
-	background-color: blue;
-	color: white;
-}
-
 .reviews {
 	position:absolute;
 	top:450px;
 	left:80px;
+	color: navy;
 }
 
 .reviews img {
@@ -88,6 +79,7 @@
 	position:relative;
 	top:5px;
 	left:5px;
+	color: navy;
 }
 
 .reviews div {
@@ -95,6 +87,7 @@
 	height:50px;
 	border: 1px solid black;
 	margin-bottom:5px;
+	color: navy;
 }
 
 
@@ -103,6 +96,7 @@
 	position:relative;
 	left:20px;
 	bottom:10px;
+	color: navy;
 }
 
 .mission {
@@ -112,29 +106,71 @@
 	right:5rem;
 }
 
-.login-section
-{
-	background-color: lightgrey;
-	width: 65px;
-	border-left: 2px solid black;
-	border-bottom: 2px solid black;
-	padding: 10px;
-	margin:0px;
-	position:absolute;
-	fill-rule: 0px;
-	grid: 0px;
+/* Login Section Container */
+.auth-section {
+    background-color: var(--white); 
+    padding: 3rem; 
+    border-radius: 10px; 
+    margin: 3rem 0; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.login
-{
-	padding-left:9.47px;
-	padding-right:9.47px;
-	margin-bottom:5px;
+/* Login Form Container */
+.auth-container {
+    max-width: 500px; 
+    margin: auto; /* Centers the form */
 }
 
-.signIn
-{
-	padding-left:1px;
-	padding-right:1px;
-	width:60px;
+/* Tab Buttons (Login/Register) */
+.auth-tabs {
+    display: flex; 
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    flex: 1; 
+    padding: 1.2rem; 
+    font-size: 1.3rem; 
+    cursor: pointer;
+    border: none;
+}
+
+.tab-button.active {
+    background: var(--primary-blue); 
+    color: white; 
+    border-radius: 5px 0 0 5px;
+}
+
+.tab-button:not(.active) {
+    background: var(--light-blue); 
+    color: var(--primary-blue); 
+    border-radius: 0 5px 5px 0;
+}
+
+/* Form Elements */
+.auth-form input {
+    width: 100%; 
+    padding: 1.2rem; 
+    margin-bottom: 1.5rem; 
+    font-size: 1.2rem; 
+    border: 2px solid #ddd; 
+    border-radius: 5px;
+}
+
+.auth-button {
+    width: 100%; 
+    padding: 1.2rem; 
+    font-size: 1.3rem; 
+    background-color: var(--primary-blue); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-bottom: 1rem;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    color: var(--primary-blue); 
+    font-size: 1.1rem;
 }

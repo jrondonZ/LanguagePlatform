@@ -12,18 +12,27 @@
 <body>
 	<h1 class="title">Welcome to Camelingo!</h1>
 
-	   <div class="login-section">
-        <div class="container" id="auth-container">
-            <h2>Login</h2>
-
-			<button class="login" onclick="redirectToLogin()">Log In</button>
-            <input type="text" id="login-username" placeholder="Username">
-            <input type="password" id="login-password" placeholder="Password">
-            <button onclick="login()">Login</button>
-            <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
-            <p id="message"></p>
-        </div>
-    </div>
+	<div class="login-section">
+        <!-- Login/Register Section -->
+		<section class="auth-section" style="-color: var(--white); padding: 3rem; border-radius: 10px; margin: 3rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+			<div class="auth-container" id="auth-container" style="max-width: 500px; margin: 0 auto;">
+				<div class="auth-tabs" style="display: flex; margin-bottom: 2rem;">
+					<button class="tab-button active" onclick="showLogin()" style="flex: 1; padding: 1.2rem; font-size: 1.3rem; background: var(--primary-blue); color: white; border: none; border-radius: 5px 0 0 5px; cursor: pointer;">Login</button>
+					<button class="tab-button" onclick="showRegister()" style="flex: 1; padding: 1.2rem; font-size: 1.3rem; background: var(--light-blue); color: var(--primary-blue); border: none; border-radius: 0 5px 5px 0; cursor: pointer;">Register</button>
+				</div>
+				<div class="auth-form">background
+					<input type="text" id="login-username" placeholder="Username or Email" style="width: 100%; padding: 1.2rem; margin-bottom: 1.5rem; font-size: 1.2rem; border: 2px solid #ddd; border-radius: 5px;">
+					<input type="password" id="login-password" placeholder="Password" style="width: 100%; padding: 1.2rem; margin-bottom: 1.5rem; font-size: 1.2rem; border: 2px solid #ddd; border-radius: 5px;">
+					<button class="auth-button" onclick="login()" style="width: 100%; padding: 1.2rem; font-size: 1.3rem; background-color: var(--primary-blue); color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 1rem;">
+						<i class="fas fa-sign-in-alt"></i> Login
+					</button>
+					<div class="auth-footer" style="text-align: center;">
+						<a href="#" class="forgot-password" style="color: var(--primary-blue); font-size: 1.1rem;">Forgot password?</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 	
 	<div class="nav">
 		<button class="button button1" onclick="redirectToLibraryBrowser()">Browse Library</button>
@@ -49,15 +58,6 @@
 			<p>I love the website -User3</p>
 		</div>
 		
-	</div>
-
-	<div class="mission">
-		<h2>What we do/why we are different!</h2>
-		<ul>
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
-		</ul>
 	</div>
 
 </body>
