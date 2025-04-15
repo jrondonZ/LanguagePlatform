@@ -113,6 +113,7 @@
     border-radius: 10px; 
     margin: 3rem 0; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+	color: var(--white); 
 }
 
 /* Login Form Container */
@@ -129,16 +130,23 @@
 
 .tab-button {
     flex: 1; 
-    padding: 1.2rem; 
-    font-size: 1.3rem; 
-    cursor: pointer;
-    border: none;
+	padding: 1.2rem; 
+	font-size: 1.3rem; 
+	background: var(--light-blue); 
+	color: var(--primary-blue); 
+	border: none; 
+	border-radius: 0 5px 5px 0; 
+	cursor: pointer;
 }
 
 .tab-button.active {
-    background: var(--primary-blue); 
-    color: white; 
-    border-radius: 5px 0 0 5px;
+    flex: 1; 
+	padding: 1.2rem; 
+	font-size: 1.3rem; 
+	background: var(--primary-blue); 
+	color: white; border: none; 
+	border-radius: 5px 0 0 5px; 
+	cursor: pointer;
 }
 
 .tab-button:not(.active) {
@@ -159,14 +167,14 @@
 
 .auth-button {
     width: 100%; 
-    padding: 1.2rem; 
-    font-size: 1.3rem; 
-    background-color: var(--primary-blue); 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    margin-bottom: 1rem;
+	padding: 1.2rem; 
+	font-size: 1.3rem; 
+	background-color: var(--primary-blue); 
+	color: white; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+	margin-bottom: 1rem;
 }
 
 /* Forgot Password Link */
