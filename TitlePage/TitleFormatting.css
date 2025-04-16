@@ -61,14 +61,14 @@
 	color: black; 
 	border: 2px solid blue;
 	padding: 16px 26px;
-	margin-top: 32px;
+	margin-top: 16px;
 	top:20rem;
 	
 }
 
 .reviews {
 	position:absolute;
-	top:450px;
+	top:300px;
 	left:80px;
 	color: navy;
 }
@@ -126,6 +126,7 @@
 .auth-tabs {
     display: flex; 
     margin-bottom: 2rem;
+	width:542.39px;
 }
 
 .tab-button {
@@ -135,24 +136,26 @@
 	background: var(--light-blue); 
 	color: var(--primary-blue); 
 	border: none; 
-	border-radius: 0 5px 5px 0; 
+	border-radius: 5px 5px 5px 5px; 
 	cursor: pointer;
+	border:1px solid black;
 }
 
-.tab-button.active {
+.tab-button .active {
     flex: 1; 
 	padding: 1.2rem; 
 	font-size: 1.3rem; 
 	background: var(--primary-blue); 
 	color: white; border: none; 
-	border-radius: 5px 0 0 5px; 
+	border: none;
+	border-radius: 5px 5px 5px 5px; 
 	cursor: pointer;
 }
 
 .tab-button:not(.active) {
+	position:relative;
     background: var(--light-blue); 
     color: var(--primary-blue); 
-    border-radius: 0 5px 5px 0;
 }
 
 /* Form Elements */
