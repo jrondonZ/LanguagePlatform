@@ -9,7 +9,6 @@
 
 .selection {
 	position:absolute;
-	left: 36%;
 	top:100px;
 }
 
@@ -43,10 +42,6 @@ table, th, td {
 
 td{
 	width:200px;
-}
-
-table.center {
-	left:33%;
 }
 
 

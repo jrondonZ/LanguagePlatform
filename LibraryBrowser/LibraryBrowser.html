@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Library</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .search-section {
+      margin: 20px 0;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 200px;
+    }
+    .filter-section {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <h1>Browse Library</h1>
+    <button onclick="logout()">Log Out</button>
+  </div>
+
+  <div class="search-section">
+    <label for="search">Search...</label>
+    <input type="text" id="search" placeholder="Biochem">
+    <button onclick="searchLibrary()">🔍</button>
+    <div class="filter-section">
+      <label for="filter">Filter:</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="flashcard">Flashcard</option>
+        <option value="studyguide">Study Guide</option>
+        <option value="practicetest">Practice Test</option>
+      </select>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name of Deck</th>
+        <th>Type</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic content will go here -->
+    </tbody>
+  </table>
+
+  <script>
+     if (!localStorage.getItem("username")) {
+        localStorage.setItem("username", "user123");
+    }
+
+    // Function to populate library table
+    window.onload = function () {
+        loadLibrary();
+    };
+
+    function loadLibrary(filterValue = "all", searchQuery = "") {
+        const library = JSON.parse(localStorage.getItem("library")) || [];
+        const tableBody = document.querySelector("table tbody");
+        tableBody.innerHTML = "";
+
+        const filteredLibrary = library.filter(deck => {
+            const matchesType = filterValue === "all" || deck.type?.toLowerCase() === filterValue;
+            const matchesSearch = deck.name?.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchesType && matchesSearch;
+        });
+
+        filteredLibrary.forEach((deck, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${deck.name || "—"}</td>
+                <td>${deck.type || "Flashcard"}</td>
+                <td>${deck.user || "—"}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Search and Filter
+    function searchLibrary() {
+        const searchQuery = document.getElementById("search").value.trim();
+        const filterValue = document.getElementById("filter").value;
+        loadLibrary(filterValue, searchQuery);
+    }
+
+    // Log out
+    function logout() {
+        localStorage.removeItem("username");
+        window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
