@@ -12,13 +12,16 @@ const app = express();
 app.use(cors(
   {
     origin: 'http://localhost:5000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   }
 ));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // For form data
 app.use(express.json()); // For JSON data
+
+app.get('/api/check-auth', authenticateToken, (req, res) => {
+  res.json({ isAuthenticated: true, user: req.user });
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
