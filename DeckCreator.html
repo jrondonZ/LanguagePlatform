@@ -80,12 +80,13 @@
 
             const deckName = document.getElementById("name").value;
             const deck = { name: deckName, terms, defs };
-            localStorage.setItem("savedDeck", JSON.stringify(deck)); // Save to "library"
+            localStorage.setItem("savedDeck", JSON.stringify(deck)); // Save to library
         }
 
         function logout() {
             localStorage.removeItem("deckName");
             localStorage.removeItem("savedDeck");
+            localStorage.removeItem("username");
             window.location.href = "login.html";
         }
     </script>
